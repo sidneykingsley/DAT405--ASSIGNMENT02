@@ -1,0 +1,36 @@
+body {
+  background-color: #aae6ff;
+  padding: 0;
+  margin: 0;
+}
+#container {
+  height:25px;
+  width:200px;
+  position: fixed;
+}
+
+input, button, submit { border:none;}
+textarea:focus, input:focus{
+    outline-color: #eee;
+}
+textarea:focus, button:focus{
+    outline: none;
+}
+input {
+  padding-left: 5px;
+}
+#searchButton {
+  height:21px;
+  background-color: #111;
+}
+
+#searchBar {
+  height:20px;
+  width: 150px;
+  background-color: #fff;
+}
+
+#searchImage {
+  width: 10px;
+  height: 10px;
+}

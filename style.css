@@ -1,0 +1,34 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+canvas {
+  vertical-align: center;
+}
+
+
+
+#waves {
+  position: absolute;
+}
+
+.text {
+  margin-top: 0px;
+  margin-left: 10px;
+  font-family: sans-serif;
+  line-height: 10px;
+}
+
+#codeImg {
+  width:25px;
+}
+
+#descText {
+  font-weight: lighter;
+  letter-spacing: 2px;
+  font-size: 12px;
+  margin-top: -33px;
+  margin-left: 35px;
+  position: absolute;
+}
