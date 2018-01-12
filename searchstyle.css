@@ -4,20 +4,20 @@ body {
   margin: 0;
 }
 #container {
-  height:25px;
-  width:200px;
+  height:25px;  /* setting size of form */
+  width:200px; 
   position: fixed;
 }
 
 input, button, submit { border:none;}
 textarea:focus, input:focus{
-    outline-color: #eee;
+    outline-color: #eee;  /* change button styling */
 }
 textarea:focus, button:focus{
-    outline: none;
+    outline: none; /* changing button styling */
 }
 input {
-  padding-left: 5px;
+  padding-left: 5px; /* changing text box padding */
 }
 #searchButton {
   height:21px;

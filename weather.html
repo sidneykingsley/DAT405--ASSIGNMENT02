@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>marine</title>
-    <!--<link rel="shortcut icon" href="titleicon.png"/>-->
-    <script src="libraries/p5.js" type="text/javascript"></script>
+    <title>sailing guide</title>
+    <link rel="shortcut icon" href="content/titleicon.png"/> <!--title icon-->
+    <script src="libraries/p5.js" type="text/javascript"></script> <!-- libaries and js documents-->
     <script src="libraries/p5.dom.js" type="text/javascript"></script>
     <script src="libraries/p5.sound.js" type="text/javascript"></script>
     <script src="search.js" type="text/javascript"></script>
@@ -13,15 +13,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js" type="text/javascript"></script>
   </head>
   <body>
-    <div class="text">
-      <h1 id="cityText"></h1>
-      <p  id="longlatText"><p>
-      <img src="" id="codeImg">
-      <p  id="descText"><p>
+  <div id="everything"> <!--div which calls css tag to style everything into place-->
+    <div class="text">  <!--div which calls css tag to style text-->
+      <h1 id="cityText"></h1> <!--text which is changed by the js depending on city name-->
+      <p  id="longlatText"><p> <!--text which is changed by the js depending on coordinates-->
+      <img src="" id="codeImg"> <!--image which depends on js link placed in it-->
+      <p  id="descText"><p> <!--text which is changed by the js to show weather description-->
     </div>
-    <img src="content/waves.png" id="waves">
-    <div id="everything">
-    <div id="sketch-holder"></div>
+    <img src="content/waves.png" id="waves"> <!--img to overlay top of canvas into waves shapes-->
+    <div id="sketchstyle"> <!--div which calls css tag to style canvas-->
+      <div id="sketch-holder"></div> <!--div which calls css tag to style everything into place-->
     </div>
+  </div>
   </body>
 </html>

@@ -1,46 +1,41 @@
-//http://api.openweathermap.org
-let w = window.innerWidth;
-let h = window.innerHeight;
-let pw = 1280;
-let ph = 720;
-var mushroom = [];
-let locate = [];
-var lat;
-var long;
-let googKey = "AIzaSyBLoxdO0e5DvrIWP-DBxpECB00k3ndUNUs";
-var locationData;
+let pw = window.innerWidth;       //find the width of the window
+let ph = window.innerHeight;      //find the height of the window
+let w = 1280;                     //define w as 1280
+let h = 720;                      //define h as 720
+var valPlaceName = [];            //defined as array
+let locate = [];                  //defined as array
+var lat;                          //defined as int
+var long;                         //defined as int
+let googKey = "AIzaSyBLoxdO0e5DvrIWP-DBxpECB00k3ndUNUs"; //api key from google which is used to take place names and return them as latlong coordinates defined as string
+var locationData;                 //defined as string
 
-function preload() {
+function preload() {}
 
-}
 function setup() {
-  lat = locate.results["0"].geometry.location.lat;
-  long =locate.results["0"].geometry.location.lng;
-  locationData = locater();
-  console.log(locationData);
-  window.location.href="weather.html?"+locationData+"+"+lat+"+"+long;
-
+  lat = locate.results["0"].geometry.location.lat; //lat equals latidute data extracted from api
+  long = locate.results["0"].geometry.location.lng; //long equals latidute data extracted from api
+  locationData = locater();       //locatonData equals city entered
+  console.log(locationData);      //log city name
+  window.location.href="weather.html?"+locationData+"+"+lat+"+"+long; //redirect to new page with city name, longitude and latitude in the url
 }
+
 function draw() {}
 
-window.onload = function() {cssSort()};
+window.onload = function() {cssSort()}; //run function on page load
+
 function cssSort() {
-  document.getElementById("container").style.marginTop = h/2-60+"px";
-  document.getElementById("container").style.marginLeft = w/2-100+"px";
-  longlat = [lat,long];
+  document.getElementById("container").style.marginTop = ph/2-60+"px"; //place text box central in the page vertically
+  document.getElementById("container").style.marginLeft = pw/2-100+"px"; //place text box central in the page horizontally
 }
 
 function formChanged() {
-mushroom = document.getElementsByName("search")[0].value;
-
+valPlaceName = document.getElementsByName("search")[0].value; //when a key is lifted up the character is added to this string (it is called from the html form)
 }
 
-function locater() {
-  console.log(mushroom);
-  var entryCitytemp = mushroom;
-  let locateurl = "https://maps.googleapis.com/maps/api/geocode/json?address="+entryCitytemp+"&key="+googKey;
-  locate = loadJSON(locateurl);
-  console.log(locate);
-  console.log("entrycity = "+entryCitytemp);
-  return entryCitytemp;
+function locater() {              // function is ran when button is pressed
+  var entryCitytemp = valPlaceName; //entryCitytemp equals all keys entered to this point
+  let locateurl = "https://maps.googleapis.com/maps/api/geocode/json?address="+entryCitytemp+"&key="+googKey; //url for the json file using api key and entered city
+  locate = loadJSON(locateurl);   //load api key into array "locate" using p5 function loadJSON
+  console.log(locate);            //log api array
+  return entryCitytemp;           //return value of the city entered
 }

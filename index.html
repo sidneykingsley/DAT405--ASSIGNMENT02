@@ -2,17 +2,17 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>marine</title>
-    <script src="libraries/p5.js" type="text/javascript"></script>
+    <title>sailing guide</title>
+    <link rel="shortcut icon" href="content/titleicon.png"/> <!-- title icon -->
+    <script src="libraries/p5.js" type="text/javascript"></script> <!-- libaries and js documents-->
     <script src="libraries/p5.dom.js" type="text/javascript"></script>
     <script src="libraries/p5.sound.js" type="text/javascript"></script>
     <script src="search.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="searchstyle.css">
   </head>
   <body>
-    <div id="container">
-        <input type="text" placeholder="Enter as city, country" autocomplete="off" name="search"  onkeyup="formChanged()" id="searchBar">
-        <button type="submit" onclick="locater()" id="searchButton" ><img src="content/search.png" id="searchImage"></button>
+    <div id="container"> <!--div with id to style the form-->
+        <input type="text" placeholder="Enter as city, country" autocomplete="off" name="search"  onkeyup="formChanged()" id="searchBar"> <!--search bar which calls a function to save each character as it is entered-->
+        <button type="submit" onclick="locater()" id="searchButton" ><img src="content/search.png" id="searchImage"></button> <!--button which calls function to relocated the page and put found data in the url-->
 </div>
 </html>
-  

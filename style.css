@@ -1,13 +1,11 @@
 body {
-  padding: 0;
   margin: 0;
+  background-color: #fff;
 }
 
 canvas {
-  vertical-align: center;
+  vertical-align: center; /* aligning canvas */
 }
-
-
 
 #waves {
   position: absolute;
@@ -15,7 +13,7 @@ canvas {
 
 .text {
   margin-top: 0px;
-  margin-left: 10px;
+  padding-left: 10px;
   font-family: sans-serif;
   line-height: 10px;
 }
@@ -31,4 +29,10 @@ canvas {
   margin-top: -33px;
   margin-left: 35px;
   position: absolute;
+}
+
+#everything {
+  background-color: #fff;
+  width: 1280px;
+  padding-top: 5px;
 }
